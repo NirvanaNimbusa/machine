@@ -19,16 +19,18 @@ guidelines](https://github.com/docker/docker/blob/master/CONTRIBUTING.md).
 
 The requirements to build Machine are:
 
-1.  A running instance of Docker or a Golang 1.6 development environment
+1.  A running instance of 32bit Docker or a Golang 1.6 development environment
 2.  The `bash` shell
 3.  [Make](https://www.gnu.org/software/make/)
 
 ## Build using Docker containers
 
-To build the `docker-machine` binary using containers, simply run:
+To build the `docker-machine` binary on a 32bit Docker installation using containers, simply run:
 
     $ export USE_CONTAINER=true
     $ make build
+    // Once it's finished, you have your binary in the `bin` dir.
+    $ bin/docker-machine version
 
 ## Local Go development environment
 
